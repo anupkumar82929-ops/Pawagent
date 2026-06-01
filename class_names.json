@@ -1,0 +1,242 @@
+{
+  "data_dir": "E:\\work space\\new project\\Mixed_breed_dataset_single",
+  "num_classes": 59,
+  "classes": [
+    {
+      "folder_id": 1,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 2,
+      "label": "German_shepherd"
+    },
+    {
+      "folder_id": 3,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 4,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 5,
+      "label": "redbone"
+    },
+    {
+      "folder_id": 6,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 7,
+      "label": "chow"
+    },
+    {
+      "folder_id": 8,
+      "label": "Border_terrier"
+    },
+    {
+      "folder_id": 9,
+      "label": "Siberian_husky"
+    },
+    {
+      "folder_id": 10,
+      "label": "miniature_poodle"
+    },
+    {
+      "folder_id": 11,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 12,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 13,
+      "label": "American_Staffordshire_terrier"
+    },
+    {
+      "folder_id": 14,
+      "label": "Siberian_husky"
+    },
+    {
+      "folder_id": 15,
+      "label": "American_Staffordshire_terrier"
+    },
+    {
+      "folder_id": 16,
+      "label": "bluetick"
+    },
+    {
+      "folder_id": 17,
+      "label": "Great_Pyrenees"
+    },
+    {
+      "folder_id": 18,
+      "label": "American_Staffordshire_terrier"
+    },
+    {
+      "folder_id": 19,
+      "label": "Shih-Tzu"
+    },
+    {
+      "folder_id": 20,
+      "label": "Pekinese"
+    },
+    {
+      "folder_id": 21,
+      "label": "Pekinese"
+    },
+    {
+      "folder_id": 22,
+      "label": "Labrador_retriever"
+    },
+    {
+      "folder_id": 23,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 24,
+      "label": "beagle"
+    },
+    {
+      "folder_id": 25,
+      "label": "redbone"
+    },
+    {
+      "folder_id": 26,
+      "label": "Doberman"
+    },
+    {
+      "folder_id": 27,
+      "label": "American_Staffordshire_terrier"
+    },
+    {
+      "folder_id": 28,
+      "label": "chow"
+    },
+    {
+      "folder_id": 29,
+      "label": "bluetick"
+    },
+    {
+      "folder_id": 30,
+      "label": "Tibetan_mastiff"
+    },
+    {
+      "folder_id": 31,
+      "label": "German_shepherd"
+    },
+    {
+      "folder_id": 32,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 33,
+      "label": "cocker_spaniel"
+    },
+    {
+      "folder_id": 34,
+      "label": "Siberian_husky"
+    },
+    {
+      "folder_id": 35,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 36,
+      "label": "Siberian_husky"
+    },
+    {
+      "folder_id": 37,
+      "label": "Labrador_retriever"
+    },
+    {
+      "folder_id": 39,
+      "label": "German_shepherd"
+    },
+    {
+      "folder_id": 40,
+      "label": "basset"
+    },
+    {
+      "folder_id": 41,
+      "label": "Border_collie"
+    },
+    {
+      "folder_id": 42,
+      "label": "American_Staffordshire_terrier"
+    },
+    {
+      "folder_id": 43,
+      "label": "Siberian_husky"
+    },
+    {
+      "folder_id": 44,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 45,
+      "label": "vizsla"
+    },
+    {
+      "folder_id": 46,
+      "label": "American_Staffordshire_terrier"
+    },
+    {
+      "folder_id": 47,
+      "label": "Samoyed"
+    },
+    {
+      "folder_id": 48,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 49,
+      "label": "German_shepherd"
+    },
+    {
+      "folder_id": 50,
+      "label": "Chihuahua"
+    },
+    {
+      "folder_id": 51,
+      "label": "golden_retriever"
+    },
+    {
+      "folder_id": 52,
+      "label": "Staffordshire_bullterrier"
+    },
+    {
+      "folder_id": 53,
+      "label": "German_shepherd"
+    },
+    {
+      "folder_id": 54,
+      "label": "Yorkshire_terrier"
+    },
+    {
+      "folder_id": 55,
+      "label": "cocker_spaniel"
+    },
+    {
+      "folder_id": 56,
+      "label": "Boston_bull"
+    },
+    {
+      "folder_id": 57,
+      "label": "golden_retriever"
+    },
+    {
+      "folder_id": 58,
+      "label": "American_Staffordshire_terrier"
+    },
+    {
+      "folder_id": 59,
+      "label": "German_short-haired_pointer"
+    },
+    {
+      "folder_id": 60,
+      "label": "Border_collie"
+    }
+  ]
+}
