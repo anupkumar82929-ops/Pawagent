@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawgent — Dog breed ID & care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="bg-gradient" aria-hidden="true"></div>
+    <div class="bg-puppy" aria-hidden="true" role="presentation"></div>
+    <div class="bg-paws" aria-hidden="true"></div>
+    <div class="bg-care" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="fx-orbs" aria-hidden="true"></div>
+
+    <header class="top">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="16" cy="22" rx="9" ry="7" fill="currentColor" opacity="0.9" />
+            <circle cx="9" cy="12" r="4" fill="currentColor" />
+            <circle cx="23" cy="12" r="4" fill="currentColor" />
+            <circle cx="6" cy="18" r="3.2" fill="currentColor" />
+            <circle cx="26" cy="18" r="3.2" fill="currentColor" />
+          </svg>
+        </span>
+        <div>
+          <h1>Pawgent</h1>
+          <p class="tagline">Photo first — then personalized dog care guidance</p>
+        </div>
+      </div>
+      <div id="statusPill" class="pill pill-warn">Checking…</div>
+    </header>
+
+    <p class="step-tracker" id="stepTracker" role="status">Step 1 of 2 — Identify the breed</p>
+
+    <main class="flow-main">
+      <section class="card card-hero" id="stepIdentify" aria-labelledby="stepIdentifyTitle">
+        <div class="card-head">
+          <h2 id="stepIdentifyTitle">Identify the breed</h2>
+          <p class="muted">Upload from your device or take a photo. A clear face and body help most.</p>
+        </div>
+
+        <div class="upload-row">
+          <label class="dropzone" id="dropzone">
+            <input type="file" id="fileInput" accept="image/*" hidden />
+            <div class="drop-inner">
+              <span class="drop-icon" aria-hidden="true">📁</span>
+              <p><strong>Gallery / files</strong></p>
+              <p class="fine">Tap to choose · or drag an image here</p>
+            </div>
+          </label>
+          <div class="camera-panel">
+            <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+            <button type="button" class="btn secondary" id="cameraBtn" aria-label="Open camera to take a photo">
+              <span class="cam-ico" aria-hidden="true">📷</span>
+              Use camera
+            </button>
+            <p class="fine cam-hint">On phones, allows taking a picture directly. Desktop may open a webcam or file picker depending on browser.</p>
+          </div>
+        </div>
+
+        <div class="puppy-play-zone" id="puppyPlayZone">
+          <p class="puppy-play-zone__hint">Tap the <strong>ball</strong> or grass — the puppy chases the ball.</p>
+          <div
+            class="play-yard"
+            id="playYard"
+            role="group"
+            aria-label="Play yard: tap or touch to toss the ball; the puppy runs after it."
+          >
+            <div class="play-yard__grass" aria-hidden="true"></div>
+            <div class="play-ball" id="playBall" aria-hidden="true"><span class="play-ball__round"></span></div>
+            <div class="play-puppy play-puppy--idle" id="playPuppy" aria-hidden="true">
+              <div class="play-puppy__bob" id="playPuppyBob">
+                <div class="play-puppy__flip" id="playPuppyFlip">
+                  <svg class="play-puppy__svg" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+                  <ellipse cx="58" cy="78" rx="34" ry="18" fill="#c9a06c" stroke="#8b6914" stroke-width="2" />
+                  <ellipse cx="58" cy="42" rx="28" ry="26" fill="#d4b07c" stroke="#8b6914" stroke-width="2" />
+                  <circle cx="44" cy="38" r="5" fill="#3d2a10" />
+                  <circle cx="72" cy="38" r="5" fill="#3d2a10" />
+                  <ellipse cx="58" cy="50" rx="8" ry="6" fill="#4a3310" />
+                  <path d="M30 48 Q18 40 14 52 Q12 62 22 64" fill="#c9a06c" stroke="#8b6914" stroke-width="2" />
+                  <path d="M86 48 Q98 40 102 52 Q104 62 94 64" fill="#c9a06c" stroke="#8b6914" stroke-width="2" />
+                  <ellipse cx="58" cy="22" rx="12" ry="10" fill="#d4b07c" stroke="#8b6914" stroke-width="2" />
+                  <path d="M52 18 Q58 8 66 18" stroke="#8b6914" stroke-width="2" fill="none" />
+                  <path d="M46 72 L40 92 L52 88 Z" fill="#c9a06c" stroke="#8b6914" stroke-width="1.5" />
+                  <path d="M70 72 L76 92 L64 88 Z" fill="#c9a06c" stroke="#8b6914" stroke-width="1.5" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="previewWrap" class="preview-wrap hidden">
+          <img id="preview" alt="Your upload preview" />
+          <div class="preview-actions">
+            <button type="button" class="btn ghost" id="clearBtn">Remove photo</button>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn primary" id="predictBtn" disabled>Analyze breed</button>
+        </div>
+        <div id="predictError" class="alert hidden" role="alert"></div>
+        <div id="results" class="results hidden">
+          <div class="top-pred">
+            <span class="label">Best match</span>
+            <h3 id="topLabel">—</h3>
+            <p id="topConf" class="muted"></p>
+          </div>
+          <ol id="predList" class="pred-list"></ol>
+          <div class="results-actions">
+            <button type="button" class="btn ghost" id="newDogBtn" hidden>Identify another dog</button>
+          </div>
+        </div>
+      </section>
+
+      <p class="step-teaser" id="stepTeaser">
+        <span class="step-teaser-inner"
+          ><span class="step-dot" aria-hidden="true"></span> Step 2 unlocks after a successful breed match — your care assistant will appear below.</span
+        >
+      </p>
+
+      <section class="card card-chat hidden" id="stepAssistant" aria-hidden="true" aria-labelledby="assistantTitle">
+        <div class="card-head">
+          <h2 id="assistantTitle">Care assistant</h2>
+          <p class="muted">Ask anything about dogs: feeding, exercise, grooming, training, or this breed.</p>
+        </div>
+        <div class="breed-context">
+          <span class="label">Breed context (from your photo)</span>
+          <input type="text" id="breedHint" readonly autocomplete="off" />
+        </div>
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+        <form class="chat-form" id="chatForm">
+          <textarea
+            id="chatInput"
+            rows="2"
+            maxlength="4000"
+            placeholder="e.g. How much daily exercise is reasonable for this breed?"
+          ></textarea>
+          <button type="submit" class="btn primary" id="sendBtn">Send</button>
+        </form>
+        <p class="fine footnote">
+          Advanced mode: put your OpenAI key in a local <code>.env</code> file as <code>OPENAI_API_KEY=…</code> (see
+          <code>.env.example</code>). Never commit keys. Optional: <code>OPENAI_MODEL=gpt-4o-mini</code>. Without a key,
+          Pawgent uses offline guidance (not a substitute for your vet).
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Built with PyTorch · FastAPI</span>
+      <span class="dot">·</span>
+      <span>Train locally, run privately</span>
+    </footer>
+
+    <script src="/static/app.js" type="module"></script>
+  </body>
+</html>
