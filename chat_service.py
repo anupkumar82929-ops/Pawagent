@@ -377,3 +377,13 @@ async def chat_reply_stream(
         async for chunk in _offline_stream_chunks(text + "\n\n(stream interrupted; offline fallback.)"):
             yield chunk
 
+def sanitize_hint(value: str | None) -> str | None:
+    if not value:
+        return None
+
+    value = value.strip()
+
+    if not value:
+        return None
+
+    return value[:100]
